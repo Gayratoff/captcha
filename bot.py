@@ -49,7 +49,7 @@ async def MistrUz(message: types.Message):
                         f"Bot kodi sotiladi : @MrGayratov\n")
 
 
-@dp.message_handler(chat_id=-1001825384988,content_types=['new_chat_members'])
+@dp.message_handler(Group(),content_types=['new_chat_members'])
 async def bot_echo(message: types.Message):
     user_id = message.new_chat_members[0].id
     full_name = message.new_chat_members[0].full_name
